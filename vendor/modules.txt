@@ -1,0 +1,76 @@
+# github.com/google/uuid v1.0.0
+github.com/google/uuid
+# github.com/gophercloud/gophercloud v0.17.0
+## explicit
+github.com/gophercloud/gophercloud
+github.com/gophercloud/gophercloud/openstack
+github.com/gophercloud/gophercloud/openstack/compute/v2/servers
+github.com/gophercloud/gophercloud/openstack/identity/v2/tenants
+github.com/gophercloud/gophercloud/openstack/identity/v2/tokens
+github.com/gophercloud/gophercloud/openstack/identity/v3/extensions/ec2tokens
+github.com/gophercloud/gophercloud/openstack/identity/v3/extensions/oauth1
+github.com/gophercloud/gophercloud/openstack/identity/v3/tokens
+github.com/gophercloud/gophercloud/openstack/utils
+github.com/gophercloud/gophercloud/pagination
+# github.com/gophercloud/utils v0.0.0-20210530213738-7c693d7efe47
+## explicit
+github.com/gophercloud/utils/env
+github.com/gophercloud/utils/gnocchi
+github.com/gophercloud/utils/internal
+github.com/gophercloud/utils/openstack/clientconfig
+# github.com/gorilla/context v1.1.1
+## explicit
+github.com/gorilla/context
+# github.com/gorilla/mux v1.8.0
+## explicit
+github.com/gorilla/mux
+# github.com/justinas/alice v1.2.0
+## explicit
+github.com/justinas/alice
+# github.com/kr/pretty v0.2.1
+## explicit
+# github.com/mitchellh/go-homedir v1.1.0
+github.com/mitchellh/go-homedir
+# github.com/os-pc/gocloudlb v0.0.0-20210529010120-65b17b6d1ffa
+## explicit
+github.com/os-pc/gocloudlb
+github.com/os-pc/gocloudlb/loadbalancers
+github.com/os-pc/gocloudlb/nodes
+github.com/os-pc/gocloudlb/virtualips
+# github.com/pborman/uuid v1.2.1
+## explicit
+github.com/pborman/uuid
+# github.com/sirupsen/logrus v1.8.1
+## explicit
+github.com/sirupsen/logrus
+# golang.org/x/crypto v0.0.0-20201221181555-eec23a3978ad
+## explicit
+golang.org/x/crypto/blowfish
+golang.org/x/crypto/chacha20
+golang.org/x/crypto/curve25519
+golang.org/x/crypto/ed25519
+golang.org/x/crypto/ed25519/internal/edwards25519
+golang.org/x/crypto/internal/subtle
+golang.org/x/crypto/poly1305
+golang.org/x/crypto/ssh
+golang.org/x/crypto/ssh/internal/bcrypt_pbkdf
+# golang.org/x/sys v0.0.0-20201119102817-f84b799fce68
+golang.org/x/sys/cpu
+golang.org/x/sys/internal/unsafeheader
+golang.org/x/sys/unix
+golang.org/x/sys/windows
+# golang.org/x/text v0.3.2
+golang.org/x/text/encoding
+golang.org/x/text/encoding/charmap
+golang.org/x/text/encoding/internal
+golang.org/x/text/encoding/internal/identifier
+golang.org/x/text/transform
+# gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
+## explicit
+gopkg.in/mgo.v2
+gopkg.in/mgo.v2/bson
+gopkg.in/mgo.v2/internal/json
+gopkg.in/mgo.v2/internal/sasl
+gopkg.in/mgo.v2/internal/scram
+# gopkg.in/yaml.v2 v2.4.0
+gopkg.in/yaml.v2
