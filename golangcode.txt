@@ -13,6 +13,10 @@ runcmd:
  - sudo apt-get update && sudo apt-get install -y apt-transport-https ca-certificates curl
  - sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
  - echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+ - sudo sed -i 's/groovy/focal/g' /etc/apt/sources.list
  - sudo apt-get update
  - sudo apt-get install -y kubelet kubeadm kubectl
  - sudo apt-mark hold kubelet kubeadm kubectl
+ - sudo apt install -y containerd
+ - sudo modprobe br_netfilter
+ - echo 1 > /proc/sys/net/ipv4/ip_forward
