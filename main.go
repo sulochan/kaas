@@ -21,6 +21,7 @@ func main() {
 
 	// API routes
 	apiRouter := router.PathPrefix("/api").Subrouter()
+	apiRouter.Handle("/register", chain.Append(api.SetContext).ThenFunc(api.RegisterNode)).Methods("POST")
 	apiRouter.Handle("/clusters", chain.Append(api.SetContext).ThenFunc(api.GetAllClusters)).Methods("GET")
 	apiRouter.Handle("/clusters/{cluster:[[A-Z,a-z,0-9,-]+}", chain.Append(api.SetContext).ThenFunc(api.GetCluster)).Methods("GET")
 	apiRouter.Handle("/clusters/{cluster:[A-Z,a-z,0-9,-]+}/nodes", chain.Append(api.SetContext).ThenFunc(api.GetClusterNodes)).Methods("GET")
@@ -30,6 +31,9 @@ func main() {
 
 	apiRouter.Handle("/clusters/{cluster:[A-Z,a-z,0-9,-]+}", chain.Append(api.SetContext).ThenFunc(api.DeleteCluster)).Methods("DELETE")
 	apiRouter.Handle("/clusters/{cluster:[[A-Z,a-z,0-9,-]+}/nodes/{node:[A-Z,a-z,0-9,-]+}", chain.Append(api.SetContext).ThenFunc(api.DeleteClusterNode)).Methods("DELETE")
+
+	apiRouter.Handle("/get_next_job", chain.Append(api.SetContext).ThenFunc(api.GetNextJob)).Methods("GET")
+	apiRouter.Handle("/update_job", chain.Append(api.SetContext).ThenFunc(api.UpdateJob)).Methods("GET")
 
 	if err := http.ListenAndServe(fmt.Sprintf(":%s", "9191"), nil); err != nil {
 		log.Info("http.ListendAndServer() failed with %s\n", err)
